@@ -1,8 +1,11 @@
 function togglePassword() {
   const input = document.getElementById("password");
-  if (input.type === "password") {
-    input.type = "text";
-  } else {
-    input.type = "password";
-  }
+  input.type = input.type === "password" ? "text" : "password";
+}
+
+function login(event) {
+  event.preventDefault();
+  // Simulasi login sukses
+  window.location.href = "main.html";
+  return false;
 }
