@@ -7,33 +7,38 @@
 
 body {
   height: 100vh;
-  background: linear-gradient(135deg, #1e1e2f, #3a3a5d);
+  background: linear-gradient(135deg, #11131b, #1f2333);
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
-.container {
-  backdrop-filter: blur(16px) saturate(180%);
-  -webkit-backdrop-filter: blur(16px) saturate(180%);
-  background-color: rgba(255, 255, 255, 0.15);
-  border-radius: 16px;
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+}
+
+.login-page,
+.forum-container {
+  backdrop-filter: blur(16px);
+  background: rgba(255,255,255,0.05);
   padding: 2rem;
-  width: 100%;
-  max-width: 360px;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.1);
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 0 30px rgba(0,0,0,0.5);
 }
 
 .login-box h2 {
   text-align: center;
-  color: #ffffff;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem;
 }
 
 .input-group {
   margin-bottom: 1.5rem;
-  color: #fff;
 }
 
 .input-group label {
@@ -44,15 +49,15 @@ body {
 .input-group input {
   width: 100%;
   padding: 0.75rem;
-  border: none;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.2);
-  color: #fff;
+  border: none;
+  background: rgba(255,255,255,0.1);
+  color: white;
 }
 
 .input-group input:focus {
   outline: none;
-  background: rgba(255, 255, 255, 0.3);
+  background: rgba(255,255,255,0.2);
 }
 
 .password-wrapper {
@@ -65,32 +70,80 @@ body {
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
-  color: #ddd;
+  color: #ccc;
 }
 
 button {
   width: 100%;
   padding: 0.75rem;
   background-color: #6c63ff;
-  color: #fff;
   border: none;
+  color: white;
   border-radius: 8px;
   font-weight: bold;
-  transition: 0.3s;
   cursor: pointer;
+  transition: 0.3s;
 }
 
 button:hover {
-  background-color: #5952d4;
+  background-color: #5750e5;
 }
 
-.footer {
-  text-align: center;
-  margin-top: 1rem;
-  color: #ccc;
+.animate {
+  animation: fadeIn 0.8s ease, scaleIn 0.6s ease;
 }
 
-.footer a {
-  color: #fff;
-  text-decoration: underline;
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); }
+  to { transform: scale(1); }
+}
+
+/* Forum Chat Style */
+.forum-container header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.chat-box {
+  background: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  height: 250px;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
+
+.message {
+  margin-bottom: 0.75rem;
+  line-height: 1.4;
+}
+
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.input-area input {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  background: rgba(255,255,255,0.1);
+  color: white;
+}
+
+.input-area button {
+  padding: 0.75rem 1rem;
+  border: none;
+  background: #4caf50;
+  color: white;
+  border-radius: 8px;
+  cursor: pointer;
 }
