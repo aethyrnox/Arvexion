@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Login Page Keren</title>
+  <title>Arvexion - Login</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
-    <form class="login-box">
-      <h2>Selamat Datang</h2>
+  <div class="container login-page animate">
+    <form class="login-box" onsubmit="return login(event)">
+      <h1>Arvexion</h1>
+      <h2>Login</h2>
       <div class="input-group">
         <label>Email</label>
         <input type="email" required />
@@ -21,11 +22,9 @@
           <span onclick="togglePassword()">👁️</span>
         </div>
       </div>
-      <button type="submit">Login</button>
-      <p class="footer">Belum punya akun? <a href="#">Daftar</a></p>
+      <button type="submit">Masuk</button>
     </form>
   </div>
-
   <script src="script.js"></script>
 </body>
 </html>
